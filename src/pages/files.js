@@ -10,7 +10,6 @@ const Files = () => {
 	let renderFiles = <img id='empty' src={empty} alt='empty' />;
 	if (files.length !== 0) {
 		renderFiles = files.map((file, index) => {
-			console.log(file);
 			let status = <span id='status-scraping'>Scraping ...</span>;
 			if (file.status === 'prepair') {
 				if (file.file === undefined) {
@@ -48,23 +47,6 @@ const Files = () => {
 		<div id='file-page-container'>
 			<h1>Your files are here.</h1>
 			{renderFiles}
-			{/* <div className='download-block'>
-				<i className='fa-solid fa-file'></i>
-				<div className='download-info'>
-					<span className='download-platform'>qwf</span>
-					<span className='download-search-by'>Search by "qwf"</span>
-				</div>
-				<div className='download-status'>
-					<span id='status-scraping'>Scraping ...</span>
-					<span id='status-embed'>Your file will be finished in a few minutes.</span>
-				</div>
-				<div className='download-button'>
-					<span>
-						Found <strong>qwfqwf</strong> items
-					</span>
-					<a href={`qwfqwfqwf`}>Download</a>
-				</div>
-			</div> */}
 		</div>
 	);
 };
