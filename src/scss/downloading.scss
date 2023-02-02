@@ -1,0 +1,28 @@
+@import './App.scss';
+
+#download-page-container {
+	margin-top: 1vw;
+	margin-bottom: 5vw;
+	width: 100%;
+	a {
+		text-decoration: none;
+		color: $block-shadow;
+	}
+	#download-page-loading-icon {
+		width: 50%;
+		margin: 2vw auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.gear {
+			font-size: 10vw;
+			color: $block-shadow;
+			animation: gear 7s linear infinite;
+			@keyframes gear {
+				100% {
+					transform: rotate(360deg);
+				}
+			}
+		}
+	}
+}

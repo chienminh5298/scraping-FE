@@ -1,0 +1,36 @@
+@import './App.scss';
+
+#loading-container {
+	background-color: $background-color;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	z-index: 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	#loading_animation {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		.letter {
+			margin: 5px;
+			font-size: 2vw;
+			filter: blur(10px);
+			color: $block-shadow;
+			transform: rotateZ(20deg);
+			@keyframes blur {
+				50% {
+					filter: blur(0px);
+					transform: rotateZ(2deg);
+				}
+				100% {
+					filter: blur(0px);
+					transform: rotateZ(2deg);
+				}
+			}
+		}
+	}
+}

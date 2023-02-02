@@ -1,0 +1,48 @@
+@import './App.scss';
+
+#app-footer {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin: auto;
+	border: $block-shadow 1px solid;
+	box-shadow: 5px 5px 0px $block-shadow;
+	padding: 1vw;
+	box-sizing: border-box;
+	@include mobile {
+		flex-wrap: wrap;
+	}
+	#footer-contact {
+		margin-left: 1vw;
+		h2 {
+			margin-bottom: 0.5vw;
+		}
+		span {
+			display: block;
+			font-style: italic;
+		}
+		@include mobile {
+			width: 100%;
+			text-align: center;
+		}
+	}
+	#footer-follow {
+		margin-right: 1vw;
+		@include mobile {
+			width: 100%;
+			text-align: center;
+		}
+		h2 {
+			margin-bottom: 0.5vw;
+		}
+		a {
+			display: block;
+			font-style: italic;
+			text-decoration: none;
+			color: black;
+			&:active {
+				transform: translate(2px, 2px);
+			}
+		}
+	}
+}

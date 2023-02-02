@@ -1,0 +1,40 @@
+$background-color: #e9dac1;
+$block-shadow: #54bab9;
+
+$mobile-width: 480px;
+$tablet-width: 768px;
+$desktop-width: 1280px;
+
+@mixin mobile {
+	@media (max-width: #{$tablet-width - 1px}) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (max-width: #{$desktop-width - 1px}) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: #{$desktop-width}) {
+		@content;
+	}
+}
+
+body {
+	margin: 0;
+	user-select: none;
+	width: 100vw;
+	min-height: 100vh;
+	background-color: $background-color;
+	padding: 1vw;
+	box-sizing: border-box;
+	#app-container {
+		width: 90vw;
+		margin: auto;
+		font-family: 'Kanit', sans-serif;
+		letter-spacing: 2px;
+	}
+}

@@ -1,0 +1,75 @@
+@import './App.scss';
+
+#home-page-container {
+	margin-top: 1vw;
+	margin-bottom: 5vw;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	#home-page-intro {
+		width: 60%;
+		padding-right: 1vw;
+		box-sizing: border-box;
+		@include mobile {
+			width: 100%;
+			text-align: center;
+			margin-bottom: 10px;
+		}
+		#intro-tech {
+			margin-top: 10px;
+			span {
+				font-style: italic;
+			}
+			#list-tech {
+				display: flex;
+				flex-wrap: wrap;
+				font-weight: bold;
+				color: $block-shadow;
+				font-size: 1.2vw;
+				@include mobile {
+					justify-content: center;
+				}
+				span {
+					margin: 10px;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	#home-page-img {
+		width: 40%;
+		img {
+			width: 100%;
+			box-shadow: 6px 6px 0px $block-shadow;
+			border: 1px solid $block-shadow;
+		}
+		@include mobile {
+			width: 100%;
+		}
+	}
+	#platform-container {
+		#platform {
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			.platform {
+				a {
+					display: block;
+					margin: 10px;
+					color: black;
+					&:active {
+						transform: translate(2px, 2px);
+					}
+					img {
+						width: 100px;
+						height: 100px;
+						border-radius: 50%;
+					}
+					span {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}

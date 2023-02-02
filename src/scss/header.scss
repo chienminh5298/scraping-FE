@@ -1,0 +1,30 @@
+@import './App.scss';
+
+#app-header {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin: auto;
+	border: $block-shadow 1px solid;
+	box-shadow: 5px 5px 0px $block-shadow;
+	font-family: 'Kanit', sans-serif;
+	padding: 1vw;
+	box-sizing: border-box;
+	#header-logo {
+		margin-left: 1vw;
+	}
+	#your-files-button {
+		margin-right: 1vw;
+		letter-spacing: 2px;
+		position: relative;
+		display: flex;
+		align-items: center;
+		&:active {
+			transform: translate(2px, 2px);
+		}
+		a {
+			color: black;
+			text-decoration: none;
+		}
+	}
+}

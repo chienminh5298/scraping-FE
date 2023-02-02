@@ -1,0 +1,101 @@
+@import './App.scss';
+
+#file-page-container {
+	margin-top: 1vw;
+	margin-bottom: 5vw;
+	width: 100%;
+	#empty {
+		width: 50vw;
+		margin: auto;
+		display: block;
+	}
+	.download-block {
+		margin-top: 25px;
+		margin-left: 1vw;
+		display: flex;
+		flex-wrap: wrap;
+		.fa-file,
+		.fa-gear {
+			color: $block-shadow;
+			font-size: 5vw;
+		}
+		.fa-gear {
+			animation: gear 7s linear infinite;
+			@keyframes gear {
+				100% {
+					transform: rotate(360deg);
+				}
+			}
+		}
+		.download-status {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-grow: 1;
+			font-size: 25px;
+			color: $block-shadow;
+			animation: downloadStatus 2s linear infinite;
+			@keyframes downloadStatus {
+				50% {
+					opacity: 0.3;
+				}
+			}
+			#status-embed {
+				color: green;
+			}
+		}
+		.download-info {
+			margin-left: 2vw;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			.download-platform {
+				font-weight: bold;
+				font-size: 25px;
+			}
+		}
+		.percent-bar {
+			width: 100%;
+			margin-top: 10px;
+			min-height: 5px;
+			border-radius: 5px;
+			background-color: $block-shadow;
+		}
+		.download-button {
+			flex-grow: 1;
+			display: flex;
+			justify-content: flex-end;
+			align-items: flex-end;
+			flex-direction: column;
+			span {
+				font-size: 25px;
+			}
+			a {
+				color: black;
+				padding: 5px 20px;
+				border: solid $block-shadow 1px;
+				box-shadow: 4px 4px 0px $block-shadow;
+				text-decoration: none;
+				position: relative;
+				overflow: hidden;
+				&:active {
+					transform: translate(2px, 2px);
+				}
+				&::before {
+					content: '';
+					position: absolute;
+					width: 50px;
+					height: 100%;
+					background-color: rgba(255, 255, 255, 0.781);
+					transform: skew(40deg);
+					top: 0;
+					left: -100%;
+					transition: 0.75s;
+				}
+				&:hover::before {
+					left: 150%;
+				}
+			}
+		}
+	}
+}
