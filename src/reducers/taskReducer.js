@@ -12,7 +12,10 @@ const myReducer = (state = initialState, action) => {
 			let newTask = action.payload;
 			for (let i = 0; i < temp.length; i++) {
 				if (temp[i].platform === newTask.platform && temp[i].value === newTask.value) {
-					temp[i] = { ...newTask };
+					if (newTask.status === 'prepair') temp[i] = { ...newTask };
+					else {
+						temp[i]['items'] += newTask.items;
+					}
 					break;
 				}
 			}
